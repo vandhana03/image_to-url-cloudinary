@@ -39,7 +39,7 @@ SECRET_KEY = 'django-insecure-k1d77d4-v%ua+^mnr_i)7od4za)4gluvb0h4f3drt^es5i@x-h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['image-to-url-cloudinary-3.onrender.com']
+ALLOWED_HOSTS = ['image-to-url-cloudinary-4.onrender.com']
 
 
 # Application definition
