@@ -39,7 +39,7 @@ SECRET_KEY = 'django-insecure-k1d77d4-v%ua+^mnr_i)7od4za)4gluvb0h4f3drt^es5i@x-h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['image-to-url-cloudinary-1.onrender.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -93,14 +93,13 @@ WSGI_APPLICATION = 'userproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'hash_db',
-        'USER':'root',
-        'PASSWORD':'root',
-        'HOST':'localhost',
-        'PORT':'3306',
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_PORT', '3306'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
